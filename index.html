@@ -1,127 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Noah Gutierrez | Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
-      line-height: 1.6;
-    }
-    header {
-      padding: 80px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #1e3a8a, #0f172a);
-    }
-    h1 { font-size: 3rem; margin-bottom: 10px; }
-    h2 { color: #93c5fd; }
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 14px;
-      margin: 15px 0;
-    }
-    a {
-      color: #60a5fa;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .links a {
-      margin: 0 10px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noah Gutierrez | Portfolio</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
+    line-height: 1.6;
+}
+
+header {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #1e3a8a, #0f172a);
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #93c5fd;
+    margin-top: 50px;
+}
+
+section {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 14px;
+    margin: 15px 0;
+}
+
+.links a {
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.links a:hover {
+    color: white;
+}
+
+a {
+    color: #60a5fa;
+}
+
+.skill {
+    display: inline-block;
+    background: #2563eb;
+    padding: 8px 14px;
+    margin: 5px;
+    border-radius: 999px;
+    font-size: 0.95rem;
+}
+
+ul {
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #94a3b8;
+}
+</style>
 </head>
 
 <body>
-  <header>
-    <h1>Noah Gutierrez</h1>
-    <p>UConn Engineering Student | Robotics | Python | CAD | Fabrication</p>
-    <div class="links">
-      <a href="https://www.linkedin.com/in/noahgutierrezzz/" target="_blank">LinkedIn</a>
-      <a href="https://www.instagram.com/nogutzzz/" target="_blank">Instagram</a>
-      <a href="https://www.youtube.com/@NoGutzzz" target="_blank">YouTube</a>
-      <a href="mailto:noahgutierrezzz34@gmail.com">Email</a>
-    </div>
-  </header>
 
-  <section>
+<header>
+
+    <!-- Replace profile.jpg with your picture -->
+    <img src="profile.jpg" alt="Noah Gutierrez" class="profile-pic">
+
+    <h1>Noah Gutierrez</h1>
+
+    <p>
+        UConn Robotics Engineering Student |
+        Python |
+        CAD |
+        Automation |
+        Fabrication
+    </p>
+
+    <div class="links">
+        <a href="https://github.com/NoGutzzz" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/noahgutierrezzz/" target="_blank">LinkedIn</a>
+        <a href="https://www.instagram.com/nogutzzz/" target="_blank">Instagram</a>
+        <a href="https://www.youtube.com/@NoGutzzz" target="_blank">YouTube</a>
+        <a href="mailto:noahgutierrezzz34@gmail.com">Email</a>
+    </div>
+
+</header>
+
+<section>
+
     <h2>About Me</h2>
+
     <div class="card">
-      <p>
-        I am a first-year engineering student at the University of Connecticut studying
-        Mechatronics, Robotics, and Automation Engineering. I am interested in robotics,
-        programming, automation, CAD, and hands-on engineering design and pursuing a Masters in what I love.
         <p>
-        My goal is to learn and work as hard yet smart as possible now, in order to have a more stable foundation 
-        early on and continue that process for decades to come.
-      </p>
+            I am a Robotics Engineering student at the University of Connecticut
+            with interests in automation, robotics, programming, CAD,
+            fabrication, and engineering design.
+        </p>
+
+        <p>
+            My goal is to continuously improve both technically and personally,
+            building a strong foundation that allows me to create meaningful
+            projects and contribute to innovative engineering solutions.
+        </p>
+    </div>
+
+    <h2>Education</h2>
+
+    <div class="card">
+        <h3>University of Connecticut</h3>
+
+        <p>
+            Bachelor of Science in Robotics Engineering<br>
+            Expected Graduation: Spring 2029
+        </p>
+    </div>
+
+    <h2>Engineering Interests</h2>
+
+    <div class="card">
+        <ul>
+            <li>Robotics Systems</li>
+            <li>Automation</li>
+            <li>Computer Vision</li>
+            <li>Embedded Systems</li>
+            <li>Mechanical Design</li>
+            <li>Manufacturing & Fabrication</li>
+        </ul>
     </div>
 
     <h2>Projects</h2>
+
     <div class="card">
-      <h3>Automation Bot</h3>
-      <p>
-        <a href="https://github.com/NoGutzzz/Cisco-Bot" target="_blank">View Application on Github</a>
+        <h3>Cisco Bot</h3>
+
         <p>
-        Python command-based program that processes user input and generates automated
-        responses using structured logic and event handling. 
-          <p>
-        Has but not limited to:
-            <p>
-        Smart Autofeeds and Autoposters
-              <p>
-        Incoorporated Image Analysis and AI Search
-                <p>
-        Akinator Game as a test
-      </p>
+            A Python automation platform featuring command processing,
+            AI-assisted search tools, image analysis capabilities,
+            automated posting systems, and interactive applications.
+        </p>
+
+        <ul>
+            <li>Automated posting and feed systems</li>
+            <li>AI-assisted search integration</li>
+            <li>Image analysis features</li>
+            <li>Akinator-style guessing game implementation</li>
+        </ul>
+
+        <p>
+            <a href="https://github.com/NoGutzzz/Cisco-Bot" target="_blank">
+                View Project on GitHub
+            </a>
+        </p>
     </div>
 
     <div class="card">
-      <h3>Fabrication & CAD Projects</h3>
-      <p>
-        Designed and built wooden indoor and outdoor structures using CAD planning,
-        measurements, tools, and construction fundamentals. Examples but not liimited to:
+        <h3>Fabrication & CAD Projects</h3>
+
         <p>
-          Built a large outdoor 4' x 16' Chicken Coop and Run.
-          <p>
-            Built a duck house.
-          <p>
-            Built an outdoor Sofa and Table set.
-            <p>
-              Built a ventilated worktable to store tools and better aid future projects.
-              <p> 
-                Built a bed frame.
-      </p>
+            Designed and built various indoor and outdoor projects using
+            planning, measurements, CAD concepts, and fabrication techniques.
+        </p>
+
+        <ul>
+            <li>4' × 16' Chicken Coop and Run</li>
+            <li>Duck House</li>
+            <li>Outdoor Sofa & Table Set</li>
+            <li>Ventilated Workshop Table</li>
+            <li>Custom Bed Frame</li>
+        </ul>
     </div>
 
     <h2>Skills</h2>
+
     <div class="card">
-      <p>
-        Python · CAD Basics · Robotics · Fabrication · Carpentry · Electrical/Plumbing Basics ·
-        Problem Solving · Teamwork · Organization
-      </p>
+        <span class="skill">Python</span>
+        <span class="skill">CAD</span>
+        <span class="skill">Robotics</span>
+        <span class="skill">Automation</span>
+        <span class="skill">Fabrication</span>
+        <span class="skill">Carpentry</span>
+        <span class="skill">Problem Solving</span>
+        <span class="skill">Teamwork</span>
+        <span class="skill">Organization</span>
     </div>
 
     <h2>Resume</h2>
+
     <div class="card">
-      </p>
-      <a href="Resume_of_Noah_Gutierrez_(March2026).pdf" target="_blank">View Resume</a>
+        <a href="Resume_of_Noah_Gutierrez_(March2026).pdf" target="_blank">
+            View Resume
+        </a>
     </div>
 
     <h2>Contact</h2>
+
     <div class="card">
-      <p>Email: <a href="mailto:noahgutierrezzz34@gmail.com">noahgutierrezzz34@gmail.com</a></p>
-      <p>Location: Milford, Connecticut / UConn Storrs</p>
+        <p>
+            Email:
+            <a href="mailto:noahgutierrezzz34@gmail.com">
+                noahgutierrezzz34@gmail.com
+            </a>
+        </p>
+
+        <p>
+            Location: Milford, Connecticut / UConn Storrs
+        </p>
     </div>
-  </section>
+
+</section>
+
+<footer>
+    © 2026 Noah Gutierrez
+</footer>
+
 </body>
 </html>
