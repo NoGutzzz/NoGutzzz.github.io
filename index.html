@@ -197,6 +197,36 @@ h3 {
 }
 
 /* =========================
+   CALLOUT BANNER
+========================= */
+.opportunity-banner {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.18), rgba(17, 28, 50, 0.95));
+    border: 1px solid rgba(96, 165, 250, 0.4);
+    border-left: 4px solid #3b82f6;
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.opportunity-banner strong {
+    color: #93c5fd;
+    font-size: 0.98rem;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.opportunity-banner p {
+    margin: 0;
+    color: #cbd5e1;
+    font-size: 0.88rem;
+}
+
+/* =========================
    TWO-COLUMN GRID SECTIONS
 ========================= */
 .two-col-grid {
@@ -284,7 +314,7 @@ h3 {
 
 .skill-group h4 {
     margin: 0 0 6px;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: #94a3b8;
@@ -384,7 +414,6 @@ footer {
      HERO
 ========================= -->
 <header>
-    <!-- Note: Make sure 'profile.jpg' exists in your root folder, or update the src to your exact image file name -->
     <img src="profile.jpg" alt="Noah Gutierrez" class="profile-pic" onerror="this.src='https://github.com/NoGutzzz.png'">
 
     <h1>Noah Gutierrez</h1>
@@ -396,7 +425,7 @@ footer {
     <div class="links">
         <a href="https://github.com/NoGutzzz" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/noahgutierrezzz/" target="_blank">LinkedIn</a>
-        <a href="https://www.youtube.com/@NoGutzzz" target="_blank">YouTube</a>
+        <a href="https://www.instagram.com/nogutzzz/" target="_blank">Instagram</a>
         <a href="mailto:noahgutierrezzz34@gmail.com">Email</a>
         <a href="Resume_of_Noah_Gutierrez_(March2026).pdf" target="_blank" style="background:#059669;">Resume (PDF)</a>
     </div>
@@ -412,7 +441,7 @@ footer {
         <h2>About Me</h2>
         <div class="card" style="height: calc(100% - 35px);">
             <p>
-                Robotics Engineering student at the University of Connecticut with interests in robotics, automation, CAD, fabrication, and engineering design.
+                Robotics Engineering student at the University of Connecticut with interests spanning mechanical design, embedded electronics, and software automation.
             </p>
             <p>
                 Dedicated to hands-on projects that bridge the gap between software algorithms and physical hardware mechanisms.
@@ -431,7 +460,7 @@ footer {
                 <div class="date">Exp. Spring 2029</div>
             </div>
             <p>
-                Focusing on programming, mathematics, robotics systems, embedded hardware, and technical problem-solving.
+                Building core foundations across computer science, electrical systems, mechanics, 3D prototyping, and robotics control.
             </p>
         </div>
     </section>
@@ -441,7 +470,17 @@ footer {
      EXPERIENCE
 ========================= -->
 <section id="experience">
-    <h2>Work Experience</h2>
+    <h2>Work Experience & Objectives</h2>
+    
+    <!-- OPPORTUNITY BANNER -->
+    <div class="opportunity-banner">
+        <div>
+            <strong>🎯 Seeking Summer Internships & Engineering Experience</strong>
+            <p>Actively looking for hands-on robotics, mechanical, electrical, and software engineering opportunities.</p>
+        </div>
+        <a href="mailto:noahgutierrezzz34@gmail.com" class="project-link" style="font-size: 0.9rem;">Get in Touch →</a>
+    </div>
+
     <div class="card">
         <div class="experience-header">
             <div>
@@ -496,25 +535,36 @@ footer {
 </section>
 
 <!-- =========================
-     SKILLS & INTERESTS
+     SKILLS & FOCUS AREAS
 ========================= -->
 <section id="skills">
     <h2>Skills & Focus Areas</h2>
     <div class="card">
         <div class="skill-group">
-            <h4>Technical</h4>
+            <h4>Engineering Focus Areas</h4>
             <div class="skill-container">
-                <span class="skill">Python</span>
-                <span class="skill">CAD</span>
                 <span class="skill">Robotics Systems</span>
+                <span class="skill">Mechanical Engineering</span>
+                <span class="skill">Electrical Systems</span>
+                <span class="skill">Computer Science</span>
+                <span class="skill">3D Modeling</span>
+                <span class="skill">3D Printing</span>
                 <span class="skill">Automation</span>
                 <span class="skill">Embedded Systems</span>
-                <span class="skill">Computer Vision</span>
                 <span class="skill">Fabrication & Machining</span>
             </div>
         </div>
-        <div class="skill-group" style="margin-top: 10px;">
-            <h4>Professional</h4>
+        <div class="skill-group" style="margin-top: 12px;">
+            <h4>Tools & Software</h4>
+            <div class="skill-container">
+                <span class="skill">Python</span>
+                <span class="skill">CAD Software</span>
+                <span class="skill">Git & GitHub</span>
+                <span class="skill">Computer Vision</span>
+            </div>
+        </div>
+        <div class="skill-group" style="margin-top: 12px;">
+            <h4>Professional & Leadership</h4>
             <div class="skill-container">
                 <span class="skill">Leadership</span>
                 <span class="skill">Teamwork</span>
