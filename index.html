@@ -3,11 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Noah Gutierrez | Robotics Engineering Portfolio</title>
 
 <style>
-
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -15,45 +13,45 @@
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     background: #0b1120;
     color: #e5e7eb;
-    line-height: 1.7;
+    line-height: 1.5;
+    font-size: 0.95rem;
 }
 
 /* =========================
    NAVIGATION
 ========================= */
-
 nav {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(11, 17, 32, 0.92);
+    background: rgba(11, 17, 32, 0.94);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .nav-container {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: auto;
-    padding: 14px 25px;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .nav-name {
-    font-weight: bold;
-    font-size: 1.1rem;
+    font-weight: 700;
+    font-size: 1.05rem;
     color: white;
 }
 
 .nav-links a {
-    color: #cbd5e1;
+    color: #94a3b8;
     text-decoration: none;
-    margin-left: 25px;
-    font-size: 0.95rem;
+    margin-left: 18px;
+    font-size: 0.9rem;
     transition: 0.2s;
 }
 
@@ -64,174 +62,210 @@ nav {
 /* =========================
    HERO
 ========================= */
-
 header {
-    padding: 100px 20px;
+    padding: 40px 20px 30px;
     text-align: center;
     background:
-        radial-gradient(circle at top, rgba(37,99,235,0.35), transparent 45%),
-        linear-gradient(135deg, #172554, #0b1120 70%);
+        radial-gradient(circle at top, rgba(37,99,235,0.25), transparent 60%),
+        linear-gradient(180deg, #172554 0%, #0b1120 100%);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 .profile-pic {
-    width: 190px;
-    height: 190px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #bfdbfe;
-    margin-bottom: 25px;
-    box-shadow: 0 10px 35px rgba(0,0,0,0.45);
+    border: 3px solid #60a5fa;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    background-color: #1e293b;
 }
 
 h1 {
-    font-size: 3.5rem;
-    margin: 5px 0 10px;
+    font-size: 2.25rem;
+    margin: 0 0 6px;
     color: white;
+    font-weight: 700;
 }
 
 .hero-subtitle {
-    font-size: 1.15rem;
-    color: #bfdbfe;
-    max-width: 750px;
-    margin: 0 auto 25px;
+    font-size: 1.05rem;
+    color: #93c5fd;
+    max-width: 650px;
+    margin: 0 auto 8px;
 }
 
 .hero-description {
-    max-width: 700px;
-    margin: auto;
+    max-width: 620px;
+    margin: 0 auto;
     color: #cbd5e1;
+    font-size: 0.92rem;
 }
 
 .links {
-    margin-top: 30px;
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
 }
 
 .links a {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     color: white;
-    background: #2563eb;
-    padding: 9px 16px;
-    border-radius: 8px;
+    background: #1d4ed8;
+    padding: 6px 14px;
+    border-radius: 6px;
     text-decoration: none;
-    font-weight: bold;
-    margin: 5px;
+    font-weight: 600;
+    font-size: 0.85rem;
     transition: 0.2s;
 }
 
 .links a:hover {
-    background: #3b82f6;
-    transform: translateY(-2px);
+    background: #2563eb;
+    transform: translateY(-1px);
 }
 
 /* =========================
    MAIN CONTENT
 ========================= */
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 10px 20px 30px;
+}
 
 section {
-    max-width: 1050px;
-    margin: auto;
-    padding: 55px 25px;
+    padding: 18px 0;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.35rem;
     color: #93c5fd;
-    margin-bottom: 25px;
-    margin-top: 20px;
+    margin: 0 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 h3 {
     color: white;
-    margin-bottom: 5px;
+    font-size: 1.05rem;
+    margin: 0 0 4px;
 }
 
 .card {
     background: #111c32;
     border: 1px solid rgba(255,255,255,0.07);
-    padding: 28px;
-    border-radius: 16px;
-    margin: 20px 0;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.18);
-    transition: 0.25s;
+    padding: 16px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: 0.2s;
 }
 
 .card:hover {
-    transform: translateY(-3px);
     border-color: rgba(96,165,250,0.35);
 }
 
 .card p {
     color: #cbd5e1;
+    margin: 0 0 8px;
+}
+
+.card p:last-child {
+    margin-bottom: 0;
 }
 
 .card ul {
     color: #cbd5e1;
+    margin: 6px 0 0;
+    padding-left: 20px;
+}
+
+.card li {
+    margin-bottom: 4px;
 }
 
 .date {
     color: #60a5fa;
-    font-size: 0.9rem;
-    font-weight: bold;
+    font-size: 0.82rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* =========================
+   TWO-COLUMN GRID SECTIONS
+========================= */
+.two-col-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
 }
 
 /* =========================
    EXPERIENCE
 ========================= */
-
 .experience-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.experience-title {
-    margin: 0;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 8px;
 }
 
 .experience-company {
     color: #93c5fd;
-    margin-top: 3px;
-}
-
-.responsibility {
-    margin-top: 18px;
+    font-size: 0.9rem;
+    margin: 2px 0 0;
 }
 
 /* =========================
    PROJECTS
 ========================= */
-
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
 }
 
 .project-card {
     background: #111c32;
     border: 1px solid rgba(255,255,255,0.07);
-    padding: 25px;
-    border-radius: 16px;
-    transition: 0.25s;
+    padding: 16px 18px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.2s;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-2px);
     border-color: #3b82f6;
 }
 
-.project-card h3 {
-    color: white;
+.project-card p {
+    margin: 4px 0 8px;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+}
+
+.project-card ul {
+    margin: 0 0 12px;
+    padding-left: 18px;
+    color: #cbd5e1;
+    font-size: 0.88rem;
 }
 
 .project-link {
     display: inline-block;
-    margin-top: 10px;
     color: #60a5fa;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 0.88rem;
 }
 
 .project-link:hover {
@@ -239,99 +273,92 @@ h3 {
 }
 
 /* =========================
-   SKILLS
+   SKILLS & BADGES
 ========================= */
+.skill-group {
+    margin-bottom: 12px;
+}
+.skill-group:last-child {
+    margin-bottom: 0;
+}
+
+.skill-group h4 {
+    margin: 0 0 6px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #94a3b8;
+}
+
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
 
 .skill {
     display: inline-block;
-    background: #1d4ed8;
-    color: white;
-    padding: 8px 15px;
-    margin: 5px;
-    border-radius: 999px;
+    background: #1e293b;
+    border: 1px solid rgba(96,165,250,0.25);
+    color: #e2e8f0;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 500;
+}
+
+/* =========================
+   CONTACT & RESUME BAR
+========================= */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.contact-item {
     font-size: 0.9rem;
-    transition: 0.2s;
 }
 
-.skill:hover {
-    background: #3b82f6;
-    transform: translateY(-2px);
-}
-
-/* =========================
-   RESUME
-========================= */
-
-.resume-button {
-    display: inline-block;
-    background: #2563eb;
-    color: white;
-    padding: 12px 22px;
-    border-radius: 9px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.2s;
-}
-
-.resume-button:hover {
-    background: #3b82f6;
-    transform: translateY(-2px);
-}
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact-links a {
+.contact-item a {
     color: #60a5fa;
     text-decoration: none;
 }
 
-.contact-links a:hover {
-    color: white;
+.contact-item a:hover {
+    text-decoration: underline;
 }
 
 /* =========================
    FOOTER
 ========================= */
-
 footer {
     text-align: center;
-    padding: 40px 20px;
+    padding: 24px 20px;
     color: #64748b;
+    font-size: 0.85rem;
     border-top: 1px solid rgba(255,255,255,0.07);
 }
 
 /* =========================
    MOBILE
 ========================= */
-
-@media (max-width: 700px) {
-
-    h1 {
-        font-size: 2.5rem;
+@media (max-width: 768px) {
+    .two-col-grid {
+        grid-template-columns: 1fr;
     }
-
     .nav-container {
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
     }
-
     .nav-links a {
-        margin: 0 8px;
+        margin: 0 6px;
         font-size: 0.85rem;
     }
-
-    header {
-        padding: 70px 20px;
-    }
-
-    .profile-pic {
-        width: 150px;
-        height: 150px;
+    h1 {
+        font-size: 1.85rem;
     }
 }
-
 </style>
 </head>
 
@@ -340,15 +367,9 @@ footer {
 <!-- =========================
      NAVIGATION
 ========================= -->
-
 <nav>
-
     <div class="nav-container">
-
-        <div class="nav-name">
-            Noah Gutierrez
-        </div>
-
+        <div class="nav-name">Noah Gutierrez</div>
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
@@ -356,414 +377,186 @@ footer {
             <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
         </div>
-
     </div>
-
 </nav>
-
 
 <!-- =========================
      HERO
 ========================= -->
-
 <header>
-
-    <img
-        src="___dfds.jpeg"
-        alt="Noah Gutierrez"
-        class="profile-pic"
-    >
+    <!-- Note: Make sure 'profile.jpg' exists in your root folder, or update the src to your exact image file name -->
+    <img src="profile.jpg" alt="Noah Gutierrez" class="profile-pic" onerror="this.src='https://github.com/NoGutzzz.png'">
 
     <h1>Noah Gutierrez</h1>
-
-    <p class="hero-subtitle">
-        Robotics Engineering Student at the University of Connecticut
-    </p>
-
+    <p class="hero-subtitle">Robotics Engineering Student at the University of Connecticut</p>
     <p class="hero-description">
-        Interested in robotics, automation, programming, CAD,
-        fabrication, and engineering design.
+        Focusing on robotics, automation, programming, CAD, fabrication, and engineering design.
     </p>
 
     <div class="links">
-
-        <a href="https://github.com/NoGutzzz" target="_blank">
-            GitHub
-        </a>
-
-        <a href="https://www.linkedin.com/in/noahgutierrezzz/" target="_blank">
-            LinkedIn
-        </a>
-
-        <a href="https://www.instagram.com/nogutzzz/" target="_blank">
-            Instagram
-        </a>
-
-        <a href="https://www.youtube.com/@NoGutzzz" target="_blank">
-            YouTube
-        </a>
-
-        <a href="mailto:noahgutierrezzz34@gmail.com">
-            Email
-        </a>
-
+        <a href="https://github.com/NoGutzzz" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/noahgutierrezzz/" target="_blank">LinkedIn</a>
+        <a href="https://www.youtube.com/@NoGutzzz" target="_blank">YouTube</a>
+        <a href="mailto:noahgutierrezzz34@gmail.com">Email</a>
+        <a href="Resume_of_Noah_Gutierrez_(March2026).pdf" target="_blank" style="background:#059669;">Resume (PDF)</a>
     </div>
-
 </header>
-
 
 <main>
 
-<section id="about">
-
-    <h2>About Me</h2>
-
-    <div class="card">
-
-        <p>
-            I am a Robotics Engineering student at the University of
-            Connecticut with interests in robotics, automation,
-            programming, CAD, fabrication, and engineering design.
-        </p>
-
-        <p>
-            I enjoy learning through hands-on projects and experimenting
-            with technology to understand how systems work. My goal is to
-            continue developing my technical and professional skills while
-            building projects that combine software, hardware, and
-            engineering design.
-        </p>
-
-    </div>
-
-</section>
-
-
 <!-- =========================
-     EDUCATION
+     ABOUT & EDUCATION (COMPACT 2-COL)
 ========================= -->
-
-<section>
-
-    <h2>Education</h2>
-
-    <div class="card">
-
-        <div class="experience-header">
-
-            <div>
-                <h3>University of Connecticut</h3>
-
-                <p class="experience-company">
-                    Bachelor of Science in Robotics Engineering
-                </p>
-            </div>
-
-            <div class="date">
-                Spring 2029
-            </div>
-
+<div class="two-col-grid" id="about" style="margin-top: 15px;">
+    <section>
+        <h2>About Me</h2>
+        <div class="card" style="height: calc(100% - 35px);">
+            <p>
+                Robotics Engineering student at the University of Connecticut with interests in robotics, automation, CAD, fabrication, and engineering design.
+            </p>
+            <p>
+                Dedicated to hands-on projects that bridge the gap between software algorithms and physical hardware mechanisms.
+            </p>
         </div>
+    </section>
 
-        <p>
-            Developing a foundation in engineering, programming,
-            mathematics, robotics systems, and technical problem solving.
-        </p>
-
-    </div>
-
-</section>
-
+    <section>
+        <h2>Education</h2>
+        <div class="card" style="height: calc(100% - 35px);">
+            <div class="experience-header">
+                <div>
+                    <h3>University of Connecticut</h3>
+                    <p class="experience-company">B.S. in Robotics Engineering</p>
+                </div>
+                <div class="date">Exp. Spring 2029</div>
+            </div>
+            <p>
+                Focusing on programming, mathematics, robotics systems, embedded hardware, and technical problem-solving.
+            </p>
+        </div>
+    </section>
+</div>
 
 <!-- =========================
      EXPERIENCE
 ========================= -->
-
 <section id="experience">
-
     <h2>Work Experience</h2>
-
     <div class="card">
-
         <div class="experience-header">
-
             <div>
-
-                <h3 class="experience-title">
-                    Team Member / Managerial Responsibilities
-                </h3>
-
-                <p class="experience-company">
-                    Dunkin' — Milford, Connecticut
-                </p>
-
+                <h3>Team Member / Managerial Responsibilities</h3>
+                <p class="experience-company">Dunkin' — Milford, Connecticut</p>
             </div>
-
-            <div class="date">
-                Seasonal
-            </div>
-
+            <div class="date">Seasonal</div>
         </div>
-
         <p>
-            Worked in a fast-paced customer service environment while
-            taking on responsibilities across front-counter operations,
-            drive-thru service, beverage preparation, stocking, cleaning,
-            employee training, and store management.
+            Fast-paced customer service and operational support, handling store workflows, inventory, and shift leadership:
         </p>
-
         <ul>
-
-            <li>
-                Assisted customers through front-counter and drive-thru
-                operations while maintaining efficient and professional
-                service.
-            </li>
-
-            <li>
-                Frequently prepared beverages and supported daytime
-                production to help maintain smooth store operations.
-            </li>
-
-            <li>
-                Restocked products and supplies and maintained clean,
-                organized work areas throughout the shift.
-            </li>
-
-            <li>
-                Assisted with training and onboarding new employees,
-                helping them learn procedures, responsibilities, and
-                workplace expectations.
-            </li>
-
-            <li>
-                Took on managerial responsibilities at the Milford
-                location, including communicating announcements and
-                workplace information to staff.
-            </li>
-
-            <li>
-                Assisted with employee management responsibilities,
-                including issuing warnings and participating in
-                termination processes when necessary.
-            </li>
-
-            <li>
-                Coordinated replacement product orders to help maintain
-                inventory and ensure the location remained properly
-                supplied.
-            </li>
-
+            <li>Managed front-counter, drive-thru operations, and beverage production during high-volume periods.</li>
+            <li>Assisted with onboarding and training new employees on operating standards and store procedures.</li>
+            <li>Handled store announcements, coordinated replacement product inventory, and assisted with shift management duties.</li>
         </ul>
-
     </div>
-
 </section>
-
-
-<!-- =========================
-     ENGINEERING INTERESTS
-========================= -->
-
-<section>
-
-    <h2>Engineering Interests</h2>
-
-    <div class="card">
-
-        <div class="skill">Robotics Systems</div>
-        <div class="skill">Automation</div>
-        <div class="skill">Computer Vision</div>
-        <div class="skill">Embedded Systems</div>
-        <div class="skill">Mechanical Design</div>
-        <div class="skill">Manufacturing</div>
-        <div class="skill">Fabrication</div>
-
-    </div>
-
-</section>
-
 
 <!-- =========================
      PROJECTS
 ========================= -->
-
 <section id="projects">
-
     <h2>Projects</h2>
-
     <div class="project-grid">
-
         <div class="project-card">
-
-            <h3>Cisco Bot</h3>
-
-            <p>
-                A Python-based automation platform featuring command
-                processing, AI-assisted tools, image analysis,
-                automated posting systems, and interactive applications.
-            </p>
-
-            <ul>
-                <li>Automated posting and feed systems</li>
-                <li>AI-assisted search integration</li>
-                <li>Image analysis features</li>
-                <li>Interactive guessing game implementation</li>
-            </ul>
-
-            <a
-                class="project-link"
-                href="https://github.com/NoGutzzz/Cisco-Bot"
-                target="_blank"
-            >
-                View Project →
-            </a>
-
+            <div>
+                <h3>Cisco Bot</h3>
+                <p>A Python-based automation platform featuring command processing, AI tools, and feed integrations.</p>
+                <ul>
+                    <li>Automated posting and feed systems</li>
+                    <li>AI-assisted search integration & image analysis</li>
+                    <li>Interactive gaming features</li>
+                </ul>
+            </div>
+            <a class="project-link" href="https://github.com/NoGutzzz/Cisco-Bot" target="_blank">View on GitHub →</a>
         </div>
 
-
         <div class="project-card">
-
-            <h3>Fabrication & CAD Projects</h3>
-
-            <p>
-                A collection of hands-on construction and fabrication
-                projects involving planning, measurements, design,
-                material selection, and fabrication.
-            </p>
-
-            <ul>
-                <li>4' × 16' Chicken Coop and Run</li>
-                <li>Duck House</li>
-                <li>Outdoor Sofa & Table Set</li>
-                <li>Ventilated Workshop Table</li>
-                <li>Custom Bed Frame</li>
-            </ul>
-
+            <div>
+                <h3>Fabrication & CAD Projects</h3>
+                <p>Hands-on engineering and carpentry builds involving structural planning, measurement, and assembly.</p>
+                <ul>
+                    <li>4' × 16' Chicken Coop and Run</li>
+                    <li>Duck House & Custom Bed Frame</li>
+                    <li>Outdoor Sofa Set & Ventilated Workshop Table</li>
+                </ul>
+            </div>
+            <span class="date" style="color: #94a3b8; font-size: 0.8rem;">CAD / Physical Builds</span>
         </div>
-
     </div>
-
 </section>
 
-
 <!-- =========================
-     SKILLS
+     SKILLS & INTERESTS
 ========================= -->
-
 <section id="skills">
-
-    <h2>Technical & Professional Skills</h2>
-
+    <h2>Skills & Focus Areas</h2>
     <div class="card">
-
-        <h3>Technical</h3>
-
-        <div class="skill">Python</div>
-        <div class="skill">CAD</div>
-        <div class="skill">Robotics</div>
-        <div class="skill">Automation</div>
-        <div class="skill">Fabrication</div>
-        <div class="skill">Engineering Design</div>
-
-        <h3 style="margin-top:25px;">
-            Professional
-        </h3>
-
-        <div class="skill">Problem Solving</div>
-        <div class="skill">Teamwork</div>
-        <div class="skill">Communication</div>
-        <div class="skill">Leadership</div>
-        <div class="skill">Employee Training</div>
-        <div class="skill">Organization</div>
-        <div class="skill">Customer Service</div>
-
+        <div class="skill-group">
+            <h4>Technical</h4>
+            <div class="skill-container">
+                <span class="skill">Python</span>
+                <span class="skill">CAD</span>
+                <span class="skill">Robotics Systems</span>
+                <span class="skill">Automation</span>
+                <span class="skill">Embedded Systems</span>
+                <span class="skill">Computer Vision</span>
+                <span class="skill">Fabrication & Machining</span>
+            </div>
+        </div>
+        <div class="skill-group" style="margin-top: 10px;">
+            <h4>Professional</h4>
+            <div class="skill-container">
+                <span class="skill">Leadership</span>
+                <span class="skill">Teamwork</span>
+                <span class="skill">Employee Training</span>
+                <span class="skill">Problem Solving</span>
+                <span class="skill">Operations Management</span>
+            </div>
+        </div>
     </div>
-
 </section>
-
-
-<!-- =========================
-     RESUME
-========================= -->
-
-<section>
-
-    <h2>Resume</h2>
-
-    <div class="card">
-
-        <p>
-            For a more detailed overview of my education, experience,
-            projects, and skills, view my resume.
-        </p>
-
-        <a
-            class="resume-button"
-            href="Resume_of_Noah_Gutierrez_(March2026).pdf"
-            target="_blank"
-        >
-            View Resume
-        </a>
-
-    </div>
-
-</section>
-
 
 <!-- =========================
      CONTACT
 ========================= -->
-
 <section id="contact">
-
     <h2>Contact</h2>
-
-    <div class="card contact-links">
-
-        <p>
-            <strong>Email:</strong>
-            <a href="mailto:noahgutierrezzz34@gmail.com">
-                noahgutierrezzz34@gmail.com
-            </a>
-        </p>
-
-        <p>
-            <strong>Location:</strong>
-            Milford, Connecticut / UConn Storrs
-        </p>
-
-        <p>
-            <strong>LinkedIn:</strong>
-            <a
-                href="https://www.linkedin.com/in/noahgutierrezzz/"
-                target="_blank"
-            >
-                linkedin.com/in/noahgutierrezzz
-            </a>
-        </p>
-
-        <p>
-            <strong>GitHub:</strong>
-            <a
-                href="https://github.com/NoGutzzz"
-                target="_blank"
-            >
-                github.com/NoGutzzz
-            </a>
-        </p>
-
+    <div class="card">
+        <div class="contact-grid">
+            <div class="contact-item">
+                <strong>Email:</strong><br>
+                <a href="mailto:noahgutierrezzz34@gmail.com">noahgutierrezzz34@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <strong>Location:</strong><br>
+                <span>Milford, CT / UConn Storrs</span>
+            </div>
+            <div class="contact-item">
+                <strong>LinkedIn:</strong><br>
+                <a href="https://www.linkedin.com/in/noahgutierrezzz/" target="_blank">linkedin.com/in/noahgutierrezzz</a>
+            </div>
+            <div class="contact-item">
+                <strong>GitHub:</strong><br>
+                <a href="https://github.com/NoGutzzz" target="_blank">github.com/NoGutzzz</a>
+            </div>
+        </div>
     </div>
-
 </section>
 
 </main>
 
-
 <footer>
-
-    © 2026 Noah Gutierrez · Robotics Engineering Student
-
+    © 2026 Noah Gutierrez · Robotics Engineering
 </footer>
 
 </body>
