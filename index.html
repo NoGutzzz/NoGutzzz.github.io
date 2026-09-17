@@ -164,6 +164,7 @@ h3 {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     transition: 0.2s;
+    overflow: hidden;
 }
 
 .card:hover {
@@ -236,14 +237,30 @@ h3 {
 }
 
 /* =========================
-   EXPERIENCE & ASSOCIATIONS
+   EXPERIENCE, CLUBS & THUMBNAILS
 ========================= */
+.header-with-thumb {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.item-thumb {
+    width: 46px;
+    height: 46px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: #1e293b;
+    flex-shrink: 0;
+}
+
 .experience-header {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: flex-start;
     gap: 10px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .experience-company {
@@ -272,6 +289,27 @@ h3 {
     border-radius: 4px;
     margin-bottom: 6px;
     border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+/* =========================
+   CARD BANNERS
+========================= */
+.card-banner {
+    width: calc(100% + 40px);
+    margin: -16px -20px 14px -20px;
+    height: 110px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bottom-card-banner {
+    width: calc(100% + 40px);
+    margin: 14px -20px -16px -20px;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* =========================
@@ -328,7 +366,7 @@ h3 {
    SKILLS & BADGES
 ========================= */
 .skill-group {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 .skill-group:last-child {
     margin-bottom: 0;
@@ -410,6 +448,10 @@ footer {
     h1 {
         font-size: 1.85rem;
     }
+    .experience-header {
+        flex-direction: column;
+        gap: 4px;
+    }
 }
 </style>
 </head>
@@ -462,19 +504,25 @@ footer {
 <div class="two-col-grid" id="about" style="margin-top: 15px;">
     <section>
         <h2>About Me</h2>
-        <div class="card" style="height: calc(100% - 35px);">
-            <p>
-                Robotics Engineering student at the University of Connecticut with interests spanning mechanical design, embedded electronics, and software automation.
-            </p>
-            <p>
-                Dedicated to hands-on projects that bridge the gap between software algorithms and physical hardware mechanisms.
-            </p>
+        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                <p>
+                    Robotics Engineering student at the University of Connecticut with interests spanning mechanical design, embedded electronics, and software automation.
+                </p>
+                <p>
+                    Dedicated to hands-on projects that bridge the gap between software algorithms and physical hardware mechanisms.
+                </p>
+            </div>
+            <!-- Bottom banner image inside About Me -->
+            <img src="NoahAtWork.png" alt="Noah working on engineering projects" class="bottom-card-banner" onerror="this.style.display='none'">
         </div>
     </section>
 
     <section>
         <h2>Education</h2>
-        <div class="card" style="height: calc(100% - 35px);">
+        <div class="card">
+            <!-- Top banner image inside Education -->
+            <img src="uconn-banner.png" alt="University of Connecticut Campus" class="card-banner" onerror="this.style.display='none'">
             <div class="experience-header">
                 <div>
                     <h3>University of Connecticut</h3>
@@ -506,9 +554,12 @@ footer {
 
     <div class="card">
         <div class="experience-header">
-            <div>
-                <h3>Team Member / Managerial Responsibilities</h3>
-                <p class="experience-company">Dunkin' — Milford, Connecticut</p>
+            <div class="header-with-thumb">
+                <img src="dunkin-thumb.png" alt="Dunkin' Logo" class="item-thumb" onerror="this.style.display='none'">
+                <div>
+                    <h3>Team Member / Managerial Responsibilities</h3>
+                    <p class="experience-company">Dunkin' — Milford, Connecticut</p>
+                </div>
             </div>
             <div class="date">Seasonal</div>
         </div>
@@ -532,13 +583,16 @@ footer {
         <!-- 1. Electric Boat Racing Club -->
         <div class="card">
             <div class="experience-header">
-                <div>
-                    <h3>
-                        <a class="club-title-link" href="https://my.uconn.edu/prospective_student_visitor/uconntact/organization?filter=&feed=uconntact&id=b625c861-7618-5e8a-b53e-106ec1c71c95" target="_blank" rel="noopener">
-                            Electric Boat Racing Club ↗
-                        </a>
-                    </h3>
-                    <p class="experience-company">University of Connecticut</p>
+                <div class="header-with-thumb">
+                    <img src="electric-boat-thumb.png" alt="Electric Boat Racing Logo" class="item-thumb" onerror="this.style.display='none'">
+                    <div>
+                        <h3>
+                            <a class="club-title-link" href="https://my.uconn.edu/prospective_student_visitor/uconntact/organization?filter=&feed=uconntact&id=b625c861-7618-5e8a-b53e-106ec1c71c95" target="_blank" rel="noopener">
+                                Electric Boat Racing Club ↗
+                            </a>
+                        </h3>
+                        <p class="experience-company">University of Connecticut</p>
+                    </div>
                 </div>
                 <div class="date">September 14th, 2026 – Present</div>
             </div>
@@ -549,13 +603,16 @@ footer {
         <!-- 2. Frost Robotics Club -->
         <div class="card">
             <div class="experience-header">
-                <div>
-                    <h3>
-                        <a class="club-title-link" href="https://my.uconn.edu/prospective_student_visitor/uconntact/organization?filter=&feed=uconntact&id=a4eb8c60-c24a-5a0b-8816-22a4440c30da" target="_blank" rel="noopener">
-                            Frost Robotics Club ↗
-                        </a>
-                    </h3>
-                    <p class="experience-company">University of Connecticut</p>
+                <div class="header-with-thumb">
+                    <img src="frost-thumb.png" alt="Frost Robotics Logo" class="item-thumb" onerror="this.style.display='none'">
+                    <div>
+                        <h3>
+                            <a class="club-title-link" href="https://my.uconn.edu/prospective_student_visitor/uconntact/organization?filter=&feed=uconntact&id=a4eb8c60-c24a-5a0b-8816-22a4440c30da" target="_blank" rel="noopener">
+                                Frost Robotics Club ↗
+                            </a>
+                        </h3>
+                        <p class="experience-company">University of Connecticut</p>
+                    </div>
                 </div>
                 <div class="date">September 14th, 2026 – Present</div>
             </div>
@@ -566,13 +623,16 @@ footer {
         <!-- 3. Heart and Mind Club -->
         <div class="card">
             <div class="experience-header">
-                <div>
-                    <h3>
-                        <a class="club-title-link" href="https://my.uconn.edu/prospective_student_visitor/uconntact/organization?filter=&feed=uconntact&id=a952e9a0-91ea-5cf3-a2ba-e1fc1cb483b9" target="_blank" rel="noopener">
-                            Heart and Mind Club ↗
-                        </a>
-                    </h3>
-                    <p class="experience-company">University of Connecticut</p>
+                <div class="header-with-thumb">
+                    <img src="heart-mind-thumb.png" alt="Heart and Mind Club Logo" class="item-thumb" onerror="this.style.display='none'">
+                    <div>
+                        <h3>
+                            <a class="club-title-link" href="https://my.uconn.edu/prospective_student_visitor/uconntact/organization?filter=&feed=uconntact&id=a952e9a0-91ea-5cf3-a2ba-e1fc1cb483b9" target="_blank" rel="noopener">
+                                Heart and Mind Club ↗
+                            </a>
+                        </h3>
+                        <p class="experience-company">University of Connecticut</p>
+                    </div>
                 </div>
                 <div class="date">September 14th, 2026 – Present</div>
             </div>
@@ -636,7 +696,19 @@ footer {
                 <span class="skill">Fabrication & Machining</span>
             </div>
         </div>
-        <div class="skill-group" style="margin-top: 12px;">
+
+        <div class="skill-group" style="margin-top: 14px;">
+            <h4>Fabrication & Workshop Skills</h4>
+            <div class="skill-container">
+                <span class="skill">Carpentry</span>
+                <span class="skill">Material Planning</span>
+                <span class="skill">Structural Measurement</span>
+                <span class="skill">Power Tool Operation</span>
+                <span class="skill">Rapid Prototyping</span>
+            </div>
+        </div>
+
+        <div class="skill-group" style="margin-top: 14px;">
             <h4>Tools & Software</h4>
             <div class="skill-container">
                 <span class="skill">Python</span>
@@ -645,12 +717,14 @@ footer {
                 <span class="skill">Computer Vision</span>
             </div>
         </div>
-        <div class="skill-group" style="margin-top: 12px;">
-            <h4>Professional & Leadership</h4>
+
+        <div class="skill-group" style="margin-top: 14px;">
+            <h4>Personal & Professional Strengths</h4>
             <div class="skill-container">
+                <span class="skill">Dedicated</span>
+                <span class="skill">Fast Learner</span>
                 <span class="skill">Leadership</span>
                 <span class="skill">Teamwork</span>
-                <span class="skill">Employee Training</span>
                 <span class="skill">Problem Solving</span>
                 <span class="skill">Operations Management</span>
             </div>
