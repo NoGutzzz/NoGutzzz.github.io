@@ -242,12 +242,13 @@ h3 {
 .header-with-thumb {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
 }
 
+/* Thumbnails enlarged by 50% (46px -> 69px) */
 .item-thumb {
-    width: 46px;
-    height: 46px;
+    width: 69px;
+    height: 69px;
     border-radius: 8px;
     object-fit: cover;
     border: 1px solid rgba(255, 255, 255, 0.15);
@@ -292,21 +293,12 @@ h3 {
 }
 
 /* =========================
-   CARD BANNERS
+   16:9 CARD BANNERS
 ========================= */
-.card-banner {
-    width: calc(100% + 40px);
-    margin: -16px -20px 14px -20px;
-    height: 110px;
-    object-fit: cover;
-    display: block;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
 .bottom-card-banner {
     width: calc(100% + 40px);
-    margin: 14px -20px -16px -20px;
-    height: 140px;
+    margin: 16px -20px -16px -20px;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     display: block;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -504,7 +496,7 @@ footer {
 <div class="two-col-grid" id="about" style="margin-top: 15px;">
     <section>
         <h2>About Me</h2>
-        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
             <div>
                 <p>
                     Robotics Engineering student at the University of Connecticut with interests spanning mechanical design, embedded electronics, and software automation.
@@ -513,26 +505,28 @@ footer {
                     Dedicated to hands-on projects that bridge the gap between software algorithms and physical hardware mechanisms.
                 </p>
             </div>
-            <!-- Bottom banner image inside About Me -->
+            <!-- 16:9 Banner inside About Me -->
             <img src="NoahAtWork.png" alt="Noah working on engineering projects" class="bottom-card-banner" onerror="this.style.display='none'">
         </div>
     </section>
 
     <section>
         <h2>Education</h2>
-        <div class="card">
-            <!-- Top banner image inside Education -->
-            <img src="uconn-banner.png" alt="University of Connecticut Campus" class="card-banner" onerror="this.style.display='none'">
-            <div class="experience-header">
-                <div>
-                    <h3>University of Connecticut</h3>
-                    <p class="experience-company">B.S. in Robotics Engineering</p>
+        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <div>
+                <div class="experience-header">
+                    <div>
+                        <h3>University of Connecticut</h3>
+                        <p class="experience-company">B.S. in Robotics Engineering</p>
+                    </div>
+                    <div class="date">Exp. Spring 2029</div>
                 </div>
-                <div class="date">Exp. Spring 2029</div>
+                <p>
+                    Building core foundations across computer science, electrical systems, mechanics, 3D prototyping, and robotics control.
+                </p>
             </div>
-            <p>
-                Building core foundations across computer science, electrical systems, mechanics, 3D prototyping, and robotics control.
-            </p>
+            <!-- 16:9 Banner inside Education (placed below text) -->
+            <img src="uconn-banner.jpg" alt="University of Connecticut Campus" class="bottom-card-banner" onerror="this.style.display='none'">
         </div>
     </section>
 </div>
@@ -750,6 +744,10 @@ footer {
             <div class="contact-item">
                 <strong>LinkedIn:</strong><br>
                 <a href="https://www.linkedin.com/in/noahgutierrezzz/" target="_blank">linkedin.com/in/noahgutierrezzz</a>
+            </div>
+            <div class="contact-item">
+                <strong>12Twenty:</strong><br>
+                <a href="https://uconn.12twenty.com/students/profile?tab=home" target="_blank">uconn.12twenty.com/profile</a>
             </div>
             <div class="contact-item">
                 <strong>GitHub:</strong><br>
