@@ -198,6 +198,29 @@ h3 {
 }
 
 /* =========================
+   TOP TWO CARDS WITH BANNERS
+========================= */
+.card-with-banner {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-body {
+    padding: 16px 20px 14px;
+}
+
+.bottom-card-banner {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =========================
    CALLOUT BANNER
 ========================= */
 .opportunity-banner {
@@ -234,6 +257,7 @@ h3 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
+    align-items: stretch;
 }
 
 /* =========================
@@ -245,7 +269,6 @@ h3 {
     gap: 14px;
 }
 
-/* Thumbnails enlarged by 50% (46px -> 69px) */
 .item-thumb {
     width: 69px;
     height: 69px;
@@ -290,18 +313,6 @@ h3 {
     border-radius: 4px;
     margin-bottom: 6px;
     border: 1px solid rgba(56, 189, 248, 0.2);
-}
-
-/* =========================
-   16:9 CARD BANNERS
-========================= */
-.bottom-card-banner {
-    width: calc(100% + 40px);
-    margin: 16px -20px -16px -20px;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    display: block;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* =========================
@@ -496,8 +507,8 @@ footer {
 <div class="two-col-grid" id="about" style="margin-top: 15px;">
     <section>
         <h2>About Me</h2>
-        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-            <div>
+        <div class="card card-with-banner">
+            <div class="card-body">
                 <p>
                     Robotics Engineering student at the University of Connecticut with interests spanning mechanical design, embedded electronics, and software automation.
                 </p>
@@ -505,15 +516,15 @@ footer {
                     Dedicated to hands-on projects that bridge the gap between software algorithms and physical hardware mechanisms.
                 </p>
             </div>
-            <!-- 16:9 Banner inside About Me -->
+            <!-- 16:9 Banner flush with bottom of card -->
             <img src="NoahAtWork.png" alt="Noah working on engineering projects" class="bottom-card-banner" onerror="this.style.display='none'">
         </div>
     </section>
 
     <section>
         <h2>Education</h2>
-        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-            <div>
+        <div class="card card-with-banner">
+            <div class="card-body">
                 <div class="experience-header">
                     <div>
                         <h3>University of Connecticut</h3>
@@ -525,7 +536,7 @@ footer {
                     Building core foundations across computer science, electrical systems, mechanics, 3D prototyping, and robotics control.
                 </p>
             </div>
-            <!-- 16:9 Banner inside Education (placed below text) -->
+            <!-- 16:9 Banner flush with bottom of card -->
             <img src="uconn-banner.png" alt="University of Connecticut Campus" class="bottom-card-banner" onerror="this.style.display='none'">
         </div>
     </section>
@@ -733,6 +744,10 @@ footer {
     <h2>Contact</h2>
     <div class="card">
         <div class="contact-grid">
+            <div class="contact-item">
+                <strong>Phone:</strong><br>
+                <a href="tel:2032232223">(203) 223-2223</a>
+            </div>
             <div class="contact-item">
                 <strong>Email:</strong><br>
                 <a href="mailto:noahgutierrezzz34@gmail.com">noahgutierrezzz34@gmail.com</a>
